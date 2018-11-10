@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from datetime import datetime#오늘날짜
 import sys#프로그램 종료
 
-#di =dict()
 li=list()
 for page in range(0,1000):
     url = 'https://www.clien.net/service/board/park?&od=T31&po='+str(page)
@@ -35,7 +34,4 @@ for page in range(0,1000):
                 #제목을 스페이스 기준으로 나누고 이를 list에 저장
                 contexts=con.get('title').split(' ')
                 for context in contexts:
-                    #di[context]=di.get(context,0)+1
                     li.append(context)
-                    #print(context)
-                    #print(di[context])
